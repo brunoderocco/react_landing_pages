@@ -8,7 +8,7 @@ const titleSize = {
     font-size: ${theme.font.sizes.large};
   `,
   big: (theme) => css`
-    font-size: ${theme.font.sizes.xhuge};
+    font-size: ${theme.font.sizes.xlarge};
   `,
   huge: (theme) => css`
     font-size: ${theme.font.sizes.xhuge};
