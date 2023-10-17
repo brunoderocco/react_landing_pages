@@ -27,6 +27,10 @@ Light.parameters = {
   },
 };
 
+Light.args = {
+  darkColor: true,
+};
+
 Dark.args = {
   children: 'O texto está claro',
   darkColor: false,
