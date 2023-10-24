@@ -3,7 +3,7 @@ import P from 'prop-types';
 
 export const Heading = ({
   children,
-  darkColor = false,
+  darkColor = true,
   as = 'h1',
   size = 'huge',
   uppercase = false }) => {
