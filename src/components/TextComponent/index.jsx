@@ -4,7 +4,7 @@ import * as Styled from './styles';
 export const TextComponent = ({ children }) => {
   return (
     <Styled.Container>
-      <h1>{children}</h1>
+      {children}
     </Styled.Container>
   );
 };
