@@ -31,5 +31,6 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'testing-library/no-node-access': ["error", { "allowContainerFirstChild": false }],
   },
 };
