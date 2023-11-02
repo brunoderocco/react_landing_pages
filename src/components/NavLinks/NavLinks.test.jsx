@@ -24,4 +24,9 @@ describe('<NavLinks />', () => {
     );
   });
 
+  it('should match snapshot', () => {
+    renderTheme(<NavLinks links={mock} />);
+    expect(screen.getAllByRole('link')).toMatchSnapshot();
+  });
+
 });
