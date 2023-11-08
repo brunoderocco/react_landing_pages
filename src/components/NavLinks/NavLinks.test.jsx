@@ -18,6 +18,7 @@ describe('<NavLinks />', () => {
 
   it('should render link style', () => {
     renderTheme(<NavLinks links={mock} />);
+    screen.debug(screen.getByText(/Link 10/i).parentElement);
     expect(screen.getByText(/Link 10/i).parentElement).toHaveStyleRule(
       'flex-flow',
       'row wrap',
@@ -25,8 +26,8 @@ describe('<NavLinks />', () => {
   });
 
   it('should match snapshot', () => {
-    renderTheme(<NavLinks links={mock} />);
-    expect(screen.getAllByRole('link')).toMatchSnapshot();
+    const { container } = renderTheme(<NavLinks links={mock} />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
 });
