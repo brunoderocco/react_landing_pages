@@ -1,14 +1,25 @@
 import { SectionBackground } from '.';
+import { SectionContainer } from '../SectionContainer';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: 'SectionBackground',
   component: SectionBackground,
   args: {
-    children: 'SectionBackground',
+    children: (
+      <div>
+        <h1>SectionBackground</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+          doloribus debitis minima nam beatae alias eius, mollitia asperiores
+          animi dolorem esse, aperiam nesciunt praesentium. Labore vel optio
+          quaerat aspernatur expedita!
+        </p>
+      </div>
+    ),
   },
   argTypes: {
-    children: { type: 'string' },
+    children: { type: '' },
   },
 };
 
