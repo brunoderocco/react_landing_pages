@@ -1,12 +1,18 @@
 import P from 'prop-types';
 import * as Styled from './styles';
+import { SectionContainer } from '../SectionContainer';
 import { NavLinks } from '../NavLinks';
 import { LogoLink } from '../LogoLink';
 
 export const Menu = ({ links = [], logoData }) => {
   return (
     <Styled.Container>
-      <h1>Menu</h1>
+      <SectionContainer>
+        <Styled.MenuContainer>
+          <LogoLink text='Menu' link='#target' />
+          <NavLinks links={links} />
+        </Styled.MenuContainer>
+      </SectionContainer>
     </Styled.Container>
   );
 };
