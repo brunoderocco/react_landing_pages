@@ -17,6 +17,7 @@ export const Container = styled.div`
     width: 100%;
     border-bottom: ${theme.colors.mediumGray};
     background: ${theme.colors.white};
+    transition: all 300ms ease-in-out;
 
     > ${SectionContainer} {
       padding-top: 0;
@@ -32,8 +33,7 @@ export const Container = styled.div`
       height: 100vh;
       visibility: hidden;
       opacity: 0;
-      ${visible && menuVisible(theme)
-      }
+      ${visible && menuVisible(theme)}
 
       > ${SectionContainer} {
         display: grid;
@@ -82,6 +82,7 @@ ${({ theme, visible }) => css`
     border: none;
     display: none;
     pointer-events: ${visible ? 'none' : 'all'};
+
     @media ${theme.media.lteMedium} {
       display: flex;
       align-items: center;
