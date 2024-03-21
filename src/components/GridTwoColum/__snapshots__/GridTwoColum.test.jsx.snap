@@ -16,7 +16,6 @@ exports[`<GridTwoColum /> should render two column grid 1`] = `
 
 .c2 .c4 {
   margin-bottom: 4.0rem;
-  color: #0A1128;
 }
 
 .c1 {
@@ -69,11 +68,11 @@ exports[`<GridTwoColum /> should render two column grid 1`] = `
         <div
           class="c3"
         >
-          <h1
+          <h2
             class="c4 c5"
           >
             Grid two columns
-          </h1>
+          </h2>
           <p
             class="c6"
           >
