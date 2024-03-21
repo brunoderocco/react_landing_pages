@@ -14,12 +14,29 @@ export const GridText = ({ title, description, grid, background = false }) => {
                 <TextComponent>
                     {description}
                 </TextComponent>
+                <Styled.Grid>
+                    {grid.map((e1) => (
+                        <Styled.GridElement key={e1.title}>
+                            <Heading size='medium' darkColor={!background}>
+                                {e1.title}
+                            </Heading>
+                            <TextComponent>{e1.description}</TextComponent>
+                        </Styled.GridElement>
+                    ))}
+                </Styled.Grid>
             </Styled.Container> 
         </SectionBackground>
     ); 
 }; 
 
 GridText.propTypes = { 
+    background: P.bool,
     title: P.string.isRequired,
     description: P.string.isRequired,
+    grid: P.arrayOf(
+        P.shape({
+            title: P.string.isRequired,
+            description: P.string.isRequired,
+        }),
+    ).isRequired,
 }; 
