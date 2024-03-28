@@ -19,9 +19,9 @@ describe('<MenuLink />', () => {
     );
   });
 
-  /*it('should match snapshot', () => {
-    renderTheme(<MenuLink link="http://localhost" newTab={false}>Children</MenuLink>);
-    expect(screen.getByRole('link', { name: 'Children' })).toMatchInlineSnapshot('');
-  });*/
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<MenuLink link="http://localhost" newTab={false}>Children</MenuLink>);
+    expect(container).toMatchSnapshot();
+  });
 
 });
